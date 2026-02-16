@@ -1,53 +1,143 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fdfcff;
+    color: #444;
+}
+
+/* Navbar */
+nav {
+    background: #dbeafe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e3a8a;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f472b6;
+}
+
+/* Hero */
+.hero {
+    height: 85vh;
+    background: linear-gradient(to right, #e0f2fe, #fce7f3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #1e3a8a;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
+.btn {
+    background: #a5b4fc;
     color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f9a8d4;
+}
+
+/* Section */
+.section {
+    padding: 80px 20px;
     text-align: center;
 }
 
-.container {
-    padding: 30px;
+.section.light {
+    background: #f3f4f6;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 5px;
+.section h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
 }
 
-h2 {
-    margin-bottom: 30px;
-}
-
-.cards {
+/* Jadwal Cards */
+.card-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 .card {
     background: white;
-    color: black;
-    width: 220px;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #e0f2fe;
 }
 
 .card h3 {
-    background: orange;
+    background: #bfdbfe;
     padding: 8px;
-    border-radius: 8px;
-    color: white;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
 }
 
-.card ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
+/* Footer */
+footer {
+    background: #dbeafe;
+    padding: 20px;
+    text-align: center;
+    color: #1e3a8a;
 }
 
-.card li {
-    padding: 4px 0;
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
 }
